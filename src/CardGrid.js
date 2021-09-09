@@ -1,17 +1,17 @@
 import { DataCard } from "./DataCard";
-
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 // import { makeStyles } from '@material-ui/core/styles';
 // import Grid from '@material-ui/core/Grid';
 
 export const CardGrid = ({ data }) => {
   return (
-    <ul>
+    <List>
       {data.map((cardData) => (
-        <li key={cardData.date}>
-          {" "}
+        <ListItem key={cardData.date}>
           <DataCard cardData={cardData} />
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
