@@ -13,9 +13,9 @@ export const DatePickers = ({
   onEndDateChange,
 }) => {
   const IsValidEndDate = (date) => {
-    console.log(date <= startDate);
-    return date >= startDate && date <= new Date();
+    return date < startDate;
   };
+  
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container justifyContent="space-around">
